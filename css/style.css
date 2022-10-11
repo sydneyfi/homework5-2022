@@ -1,4 +1,5 @@
 /* Does it matter what we name the animation? No */
+/* keyframe creates animation of logo 'sliding' in and going from invisible to visible */
 @keyframes myanimation {
     /* Do i have to combine these in one line of from and to? No */
     from {width: 25px;}
@@ -7,11 +8,13 @@
     to {opacity: 1;}
 }
 
+/* Assigns animation to logo */
 #logo {
     animation-name: myanimation;
     animation-duration: 5s;
 }
 
+/* Sets font and backup as well as backround image and backup for if image doesn't render */
 body {
     font-family: 'Poppins', serif;
     background: url(../images/concrete_seamless.png), #F1F1F1;
@@ -29,10 +32,12 @@ header {
 }
 
 /* Is there better way to do this then hard coding? No */
+/* Makes visited links same color as non-visitied links */
 a:visited {
     color: blue;
 }
 
+/* Styles the cards to have curved upper corners and a border */
 .card > header {
     background: #288088;
     border: 2px solid #45ADAD;
@@ -58,18 +63,21 @@ a:visited {
     justify-content: center;
 }
 
+/* Styles images in gallery to have set width and a border */
 .gallery img {
     border: 10px solid #50C7C7;
     margin: 10px;
     width: 300px;
 }
 
+/* Ensures styling/wraping of gallery changes based on screen size */
 .gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+/* Alters styling for larger screens such as laptops and desktops */
 @media screen and (min-width: 900px) {
 
 header {
@@ -102,16 +110,18 @@ body > header {
 
 }
 
+/* Stops animation of logo if user has prefers reduction motion set up on their computer */
 @media screen and (prefers-reduced-motion: reduce) {
     #logo {
         animation: none;
     }
 }
 
-/* why does mine look so weird when i try control+p from my computer? */
+/* Changes styling of page if the page is printed */
 @media print {
 
 /* Why does font look different on mine? */
+/* Sets new fonts for printed page */
 body {
     font-family: Arial, Helvetica;
     background-image: none;
@@ -124,12 +134,15 @@ body > header {
 nav {
     width: 100%;
 }
+
+/* Changes positioning of nav links in printed view */
 .nav_links {
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
 }
 
+/* Changes wrap of pricing in printed view so that they appear next to eachother and aligned to the bottom */
 .pricing {
     flex-wrap: nowrap;
     align-items: flex-end;
@@ -140,10 +153,12 @@ nav {
     flex-basis: 325px;
 }
 
+/* Removes gallery when the page is printed */
 .gallery, #gallery {
     display: none;
 }
 
+/* Adds thumbs up charachter to pricing cards after second list item */
 .card ul li:nth-child(2):after {
     content: "\1F44D";
 }
