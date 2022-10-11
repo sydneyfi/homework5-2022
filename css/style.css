@@ -54,8 +54,6 @@ a:visited {
     display: flex;
     /* Do I need to wrap? Yes */
     flex-wrap: wrap;
-    /* Do I need flex direction again? Yes */
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -117,6 +115,10 @@ body > header {
 body {
     font-family: Arial, Helvetica;
     background-image: none;
+}
+
+body > header {
+    flex-direction: column;
 }
 
 nav {
