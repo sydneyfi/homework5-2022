@@ -1,6 +1,6 @@
-/* does it matter what we name the animation? */
+/* Does it matter what we name the animation? No */
 @keyframes myanimation {
-    /* do i have to combine these in one line of from and to? */
+    /* Do i have to combine these in one line of from and to? No */
     from {width: 25px;}
     to {width: 475px;}
     from {opacity: 0;}
@@ -28,7 +28,7 @@ header {
     flex-direction: column;
 }
 
-/* is there better way to do this then hard coding? */
+/* Is there better way to do this then hard coding? No */
 a:visited {
     color: blue;
 }
@@ -47,15 +47,15 @@ a:visited {
     border-top-right-radius: 50px;
     display: flex;
     flex-direction: column;
-    width: 450px;
+    flex-basis: 450px;
 }
 
 .pricing {
     display: flex;
-    /* do I need to wrap? */
+    /* Do I need to wrap? Yes */
     flex-wrap: wrap;
-    /* do I need flex direction again? */
-    /* flex-direction: column; */
+    /* Do I need flex direction again? Yes */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -80,18 +80,19 @@ header {
     justify-content: space-between;
 }
 
-/* do I have to add space-between here per instructions? */
+/* Do I have to add space-between here per instructions? Yes, to account for desktop view */
 .nav_links {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
-/* do I use width or flex-basis? */
+/* Do I use width or flex-basis? When using flex use flex-basis */
 .card {
-    width: 275px;
+    flex-basis: 275px;
 }
 
-/* is this necessary or is it already inherited? */
+/* Is this necessary or is it already inherited? Necessary */
 .pricing {
    flex-direction: row; 
 }
