@@ -1,3 +1,5 @@
+/* CSS for default view */
+
 /* Does it matter what we name the animation? No */
 /* keyframe creates animation of logo 'sliding' in and going from invisible to visible */
 @keyframes myanimation {
@@ -55,6 +57,7 @@ a:visited {
     flex-basis: 450px;
 }
 
+/* Sets pricing class (which includes all the cards) to be centered and wrap */
 .pricing {
     display: flex;
     /* Do I need to wrap? Yes */
@@ -80,6 +83,7 @@ a:visited {
 /* Alters styling for larger screens such as laptops and desktops */
 @media screen and (min-width: 900px) {
 
+/* Overrides default header styling */
 header {
     display: flex;
     flex-direction: row;
@@ -87,6 +91,7 @@ header {
 }
 
 /* Do I have to add space-between here per instructions? Yes, to account for desktop view */
+/* Overrides default nav link styling to spread out links for desktop view */
 .nav_links {
     display: flex;
     flex-direction: row;
@@ -94,6 +99,7 @@ header {
 }
 
 /* Do I use width or flex-basis? When using flex use flex-basis */
+/* Overrides default size of cards to make them smaller */
 .card {
     flex-basis: 275px;
 }
@@ -103,6 +109,7 @@ header {
    flex-direction: row; 
 }
 
+/* Makes it so that header bar with nav links stays at the top as you scroll */
 body > header {
     position: sticky;
     top: 0;
@@ -120,13 +127,13 @@ body > header {
 /* Changes styling of page if the page is printed */
 @media print {
 
-/* Why does font look different on mine? */
-/* Sets new fonts for printed page */
+/* Override default fonts and sets new fonts for printed page */
 body {
     font-family: Arial, Helvetica;
     background-image: none;
 }
 
+/* Overrides previous flex-direction for header bar */
 body > header {
     flex-direction: column;
 }
@@ -148,12 +155,13 @@ nav {
     align-items: flex-end;
 }
 
+/* Adds border to cards and overrides previous card size for printed view */
 .card {
     border: 2px solid #45ADDD;
     flex-basis: 325px;
 }
 
-/* Removes gallery when the page is printed */
+/* Removes gallery from view when the page is printed */
 .gallery, #gallery {
     display: none;
 }
